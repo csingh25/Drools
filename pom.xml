@@ -1,0 +1,126 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.drools</groupId>
+  <artifactId>boot-drools</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>boot-drools</name>
+	<description>Demo project for Spring Boot Drools</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<kie.version>6.1.0.Final</kie.version>
+		<tomcat.version>7.0.59</tomcat.version>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.spring.platform</groupId>
+				<artifactId>platform-bom</artifactId>
+				<version>1.1.1.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-ci</artifactId>
+			<version>7.15.0.Final</version>
+			
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<version>7.15.0.Final</version>
+			
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-core</artifactId>
+			<version>7.15.0.Final</version>
+			
+		</dependency>
+		<dependency>
+		    <groupId>org.drools</groupId>
+		    <artifactId>drools-decisiontables</artifactId>
+		    <version>7.15.0.Final</version>
+		</dependency>
+		<dependency>
+		   <groupId>org.drools</groupId>
+		   <artifactId>drools-compiler</artifactId>
+		   <version>7.15.0.Final</version>
+		   <exclusions>
+		      <exclusion>
+		         <groupId>com.thoughtworks.xstream</groupId>
+		         <artifactId>xstream</artifactId>
+		      </exclusion>
+		   </exclusions>
+		</dependency>
+		
+		
+		<dependency>
+	        <groupId>org.apache.tomcat</groupId>
+	        <artifactId>tomcat-juli</artifactId>
+	        <version>${tomcat.version}</version>
+    	</dependency>
+    	<dependency>
+			  <groupId>org.springframework.boot</groupId>
+			  <artifactId>spring-boot-starter-tomcat</artifactId>
+			  <version>2.3.1.RELEASE</version>
+			  <scope>compile</scope>
+		</dependency>
+		<dependency>
+			  <groupId>org.apache.tomcat.embed</groupId>
+			  <artifactId>tomcat-embed-core</artifactId>
+			  <scope>compile</scope>
+		</dependency>
+		<dependency>
+			  <groupId>org.apache.tomcat.embed</groupId>
+			  <artifactId>tomcat-embed-el</artifactId>
+			  <scope>compile</scope>
+</dependency>
+<dependency>
+  <groupId>org.apache.tomcat.embed</groupId>
+  <artifactId>tomcat-embed-websocket</artifactId>
+  <scope>compile</scope>
+</dependency>
+<dependency>
+   <groupId>com.thoughtworks.xstream</groupId>
+   <artifactId>xstream</artifactId>
+   <version>1.4.10</version>
+</dependency>
+
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.3.0</version>
+</dependency>
+<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi</artifactId>
+	<version>3.17</version>
+</dependency>
+<!-- Thanks for using https://jar-download.com -->
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				
+				
+			</plugin>
+		</plugins>
+	</build>
+</project>
